@@ -39,36 +39,6 @@ public class EpubViewerPlugin implements MethodCallHandler, FlutterPlugin, Activ
     static private EventChannel.EventSink sink;
     private static final String channelName = "vocsy_epub_viewer";
 
-//    /**
-//     * Plugin registration.
-//     */
-//    public static void onAttachedToEngine(@androidx.annotation.NonNull FlutterPluginBinding binding) {
-//
-//        context = registrar.context();
-//        activity = registrar.activity();
-//        new EventChannel(binding.getBinaryMessenger(), "page").setStreamHandler(new EventChannel.StreamHandler() {
-//
-//            @Override
-//            public void onListen(Object o, EventChannel.EventSink eventSink) {
-//
-//                sink = eventSink;
-//                if (sink == null) {
-//                    Log.i("empty", "Sink is empty");
-//                }
-//            }
-//
-//            @Override
-//            public void onCancel(Object o) {
-//
-//            }
-//        });
-//
-//
-//        final MethodChannel channel = new MethodChannel(registrar.messenger(), "vocsy_epub_viewer");
-//        channel.setMethodCallHandler(new EpubViewerPlugin());
-//
-//    }
-
     @Override
     public void onAttachedToEngine(@NonNull FlutterPluginBinding binding) {
         messenger = binding.getBinaryMessenger();
